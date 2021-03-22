@@ -1,0 +1,85 @@
+@import'Product';
+
+$primary: linear-gradient(to top, #fd9e97 0%, #fc3863 100%);
+$secondry: linear-gradient(to top, #2ac8fc 0%, #686afb 100%);
+
+*{
+    margin: 0;
+    padding: 0%;
+}
+body{
+    background-color: #141414;
+}
+
+
+
+
+@mixin primaryBtn {
+    padding: .5rem 1rem;
+    border: none;
+    color: #fff;
+    border-radius: 0.4rem;
+    background-size: 100%;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #fd9e97 0%, #fc3863 100%);
+    font-size: 1rem;
+}
+
+
+
+
+
+
+.logo{
+    color: #d94e65;
+}
+.mnBtn{
+    @include primaryBtn;
+    font-size: small;
+}
+
+.heroSec{
+    &__contentSec{
+        h1{
+            background-size: 100%;
+            background-color: #fff;
+            background-image: $primary;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color:transparent;
+        }
+
+        h2{
+            background-size: 100%;
+            background-color: #fff;
+            background-image: $secondry;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color:transparent;
+        }
+        p{
+            color: #fff;
+        }
+         button{
+            @include primaryBtn;
+        }
+    }
+    &__imgSec{
+        img{
+            height: 400px;
+        }
+    }
+}
+
+.sec2{
+    justify-content: center;
+    img{
+        height: 400px;
+        width: 300px;
+    }
+}
+

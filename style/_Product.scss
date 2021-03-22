@@ -1,0 +1,153 @@
+.slider{
+    position: relative;
+    width: 90%;
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 0.1rem solid #fff;
+    
+
+
+    &__slides{
+        position: absolute;
+        width: 500%;
+        height: 40rem;
+        display: flex;
+
+
+        
+        &--slideImg{
+            width: 20%;
+            height: 100%;
+            transition: 2s;
+           
+
+
+            & .rightSide{
+              
+                & h1{
+                    color: #fff;     
+                }
+                & p{
+                    color: #fff;
+                }
+                & .heart{
+                   color:  grey;
+                   cursor: pointer;
+                   font-size: 2rem;
+                   &:hover{
+                       color: red;
+                   }
+                   
+                }
+                & .stars{
+                    color: yellow;
+                    margin: 1rem auto;
+                  
+                   
+                }
+            & .ratting{
+            color: grey;
+            }
+
+                & .lable{
+                //    display: flex;
+    
+                & .radio{
+                    display: inline-block;
+                    border: 1px solid black;
+                    padding: .5rem 1rem;
+                    margin: 1rem;
+                    // display: flex;
+                    // flex-direction: row;
+                    background-color: rgb(54, 54, 54);
+                    color: grey;
+                    cursor: pointer;
+                   
+                    & input:checked+ .proName{
+                        border-bottom: 1px solid #fff;
+                        color: #fff;
+                    }
+
+                    & input{
+                        visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                      
+                       
+                    }
+                    & .proName{
+                        display: inline;
+                        background: rgb(54, 54, 54);
+                           & big{
+                            background: rgb(54, 54, 54);
+                            // font-size: 2rem;
+
+                        }
+                    }
+                }
+            }
+            }
+            & img{
+                width: 100%;
+                height: 30rem;
+            }
+        }
+        & #radio1, #radio2{
+            display: none;
+        }
+        & #radio1:checked ~ .first{
+            margin-left: 0;
+        }
+        & #radio2:checked ~ .first{
+            margin-left: -20%;
+        }
+       
+
+        & #radio1:checked ~ &--autoNav .autoBtn1{
+            background-color: #fff;
+        }
+        & #radio2:checked ~ &--autoNav .autoBtn2{
+            background-color: #fff;
+        }
+       
+
+       &--autoNav{
+           position: absolute;
+           bottom: 12px;
+           left: 50%;
+           display: flex;
+           transform: translateX(-50%);
+
+           & div{
+            position: relative;
+            border: 1px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 1.5rem;
+           }
+       }
+         
+       
+    }
+    &__manNav{
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        display: flex;
+
+        & .manBtn{
+            border: 1px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 1.5rem;
+         &:hover{
+             background-color: #fff;
+         }  
+        }
+       
+
+    }
+}
+ 
